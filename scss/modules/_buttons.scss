@@ -1,0 +1,34 @@
+button,
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	cursor: pointer;
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+	min-height: 2.5em;
+	min-width: 5.625em;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 1.875em;
+	background-color: transparent;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 0.825em;
+
+	&--primary {
+		color: $white;
+		background: $primary;
+		background: linear-gradient(
+			to top,
+			$primary,
+			$secondary
+		);
+	}
+
+	&--secondary {
+		color: $primary;
+		border: 1px solid $primary;
+	}
+}

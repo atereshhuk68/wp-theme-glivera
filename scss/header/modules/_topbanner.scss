@@ -1,0 +1,54 @@
+.top-banner {
+	height: 40px;
+	background-color: $bg-black;
+
+	// top-banner__container
+	&__container {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		height: inherit;
+
+		font-size: 0.75em;
+		color: $gray;
+
+		span {
+			margin-right: 2em;
+		}
+	}
+
+	// .top-banner__warning
+
+	&__warning {
+		color: $warning;
+	}
+
+	// .top-banner__icon
+
+	&__icon {
+	}
+
+	// .top-banner__connection
+
+	&__connection {
+	}
+
+	// .top-banner__link
+
+	&__link {
+		color: white;
+	}
+}
+.icon {
+}
+.icon-warning {
+}
+.top-bannet {
+	// .top-bannet__ip
+
+	&__ip {
+	}
+}

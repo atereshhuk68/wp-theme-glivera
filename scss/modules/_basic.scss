@@ -1,0 +1,63 @@
+// Кросс-браузерні базові стилі
+@import './sanitize';
+
+// Кольори
+$primary: #4cb649;
+$secondary: #5adf58;
+$black: #323642;
+$gray: #889099;
+$white: #fff;
+$lightgray: #f7f7f7;
+$warning: #ff8d00;
+
+$logo-black: #000;
+
+$bg-black: #22252E;
+$bg-white: #f2f2f2;
+
+$border-gray: #d7d8d9;
+$border-darkgray: #EBECED;
+
+$text-dark: #22252e;
+$text-sale: #f24458;
+
+html, body {
+	height: 100%;
+}
+
+body {
+	color: $text-dark;
+	line-height: 1.57;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 1rem;
+	background-color: $white;
+}
+
+// Text styles
+// Heading
+@for $i from 1 through 3 {
+  h#{$i} {
+    margin: 0;
+		line-height: 1.4;
+  }
+}
+// List
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Img
+img {
+	max-width: 100%;
+}
+
+
+// Container
+.container {
+	max-width: 1232px;
+	width: 100%;
+	padding: 0 1em;
+	margin: 0 auto;
+}

@@ -1,0 +1,233 @@
+.plans {
+	margin-top: 5em;
+	margin-bottom: 5em;
+
+	background: $black;
+	background: linear-gradient(135deg, #3d4251 0%, #272b35 100%);
+	// .plans__container
+	&__container {
+		padding-top: 6.25em;
+		padding-bottom: 3.75em;
+	}
+
+	// .plans__title
+
+	&__title {
+		font-weight: 300;
+		color: $white;
+		font-size: 3em;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	// .plans__cards
+
+	&__cards {
+	}
+
+	// .plans__payment
+
+	&__payment {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .plans__info
+
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-top: 0.625em;
+	}
+
+	// .plans__link
+
+	&__link {
+		color: $primary;
+		font-size: 0.875em;
+		font-weight: 500;
+		display: inline-grid;
+		grid-auto-flow: column;
+		column-gap: 1.15em;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:not(:last-child) {
+			margin-right: 2em;
+		}
+	}
+}
+
+.cards {
+	&--grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.25em;
+		align-items: center;
+	}
+}
+
+.card {
+	background-color: $white;
+	border-radius: 0.375em;
+	padding-top: 3em;
+	padding-bottom: 2.5em;
+	padding-left: 5.625em;
+	padding-right: 5.625em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 340px;
+
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.501961);
+
+	&--border {
+		border: 4px solid $primary;
+	}
+
+	&--bigger {
+		min-height: 380px;
+		padding-top: 3.75em;
+		padding-bottom: 3.75em;
+		padding-left: 5.625em;
+		padding-right: 5.625em;
+	}
+
+	// .card__period
+
+	&__period {
+		margin: 0;
+		color: $text-dark;
+		font-size: 0.875em;
+		padding-bottom: 0.875em;
+		position: relative;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		.card--bigger & {
+			font-weight: 700;
+		}
+
+		&::before {
+			content: '';
+			width: 24px;
+			height: 2px;
+			background-color: $primary;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	// .card__price
+
+	&__price {
+		font-size: 3.5em;
+		font-weight: 300;
+		position: relative;
+		text-align: center;
+		padding-left: 0.25em;
+		padding-right: 0.25em;
+		color: $text-dark;
+
+		&::before {
+			content: '$';
+			font-size: 0.435em;
+			position: absolute;
+			top: 0.75em;
+			left: -5px;
+		}
+
+		&::after {
+			content: attr(data-periodtitle);
+			font-size: 0.435em;
+			margin-top: 0.5em;
+			position: absolute;
+			width: max-content;
+			bottom: 5px;
+		}
+	}
+
+	hr {
+		border: none;
+		height: 1px;
+		width: 100%;
+		background-color: $border-darkgray;
+	}
+
+	// .card__details
+
+	&__details {
+		font-size: 0.875em;
+		height: 50px;
+		margin: 1.15em 0 1.5em 0;
+		text-align: center;
+
+		.cards__item:first-child & {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&::before {
+			content: attr(data-oldprice);
+			color: $text-sale;
+			text-decoration: line-through;
+			display: inline-block;
+			margin-right: 0.5em;
+		}
+	}
+
+	// .card__button
+
+	&__button {
+		width: 12.8125em;
+	}
+}
+
+.payment {
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	// .payment__title
+	&__title {
+		color: $white;
+		font-weight: 300;
+		font-size: 1.125em;
+	}
+
+	// .payment__method
+
+	&__method {
+		height: 100px;
+		display: flex;
+		align-items: center;
+	}
+
+	// .payment__picture
+
+	&__picture {
+		object-fit: contain;
+		object-position: center;
+
+		&:first-child {
+			margin-left: 2em;
+		}
+
+		&:not(:last-child) {
+			margin-right: 2em;
+		}
+	}
+}

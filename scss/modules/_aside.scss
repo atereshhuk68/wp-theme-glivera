@@ -1,0 +1,87 @@
+.aside {
+	padding-left: 3.75em;
+	border-left: 1px solid $border-darkgray;
+
+	&__block {
+		&:not(:last-child) {
+			margin-bottom: 2.625em;
+		}
+	}
+
+	.sidebar-announcements,
+	.sidebar-posts {
+		padding-bottom: 2em;
+		border-bottom: 1px solid $border-darkgray;
+	}
+
+	// Aside search
+	.search {
+		position: relative;
+
+		&__field {
+			padding: 1em 1em 1em 3em;
+			border-radius: 0.25em;
+			border: 1px solid $border-gray;
+			width: 100%;
+			font-size: 1.125em;
+			color: $text-dark;
+		}
+	}
+
+	// Aside title
+	&__title {
+		display: grid;
+		grid-auto-flow: column;
+		column-gap: 1em;
+		align-items: center;
+		margin-bottom: 1.25em;
+		color: $text-dark;
+		font-size: 1.5em;
+		font-weight: 300;
+	}
+
+		// .aside__list
+
+		&__list {
+		}
+
+		// .aside__item
+
+		&__item {
+			// padding-left: 0.5em;
+			// position: relative;
+			justify-content: flex-start;
+			display: grid;
+			grid-auto-flow: column;
+			gap: 0.3125em;
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+
+			&::before {
+				content: '';
+				margin-top: 0.5em;
+				height: 4px !important;
+				width: 4px !important;
+				border-radius: 100%;
+				display: flex;
+				background-color: $primary;
+			}
+		}
+
+		// .aside__link
+
+		&__link {
+			font-size: 0.875em;
+			color: $text-dark;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+
+}
+

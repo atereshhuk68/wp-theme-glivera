@@ -1,0 +1,79 @@
+// Top banner
+@import './modules/topbanner';
+
+.logo {
+	font-family: 'Inter', 'Roboto', Arial, sans-serif;
+	color: $logo-black;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.header {
+	padding-top: 2em;
+	padding-bottom: 1.25em;
+	// .header__container
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .header__logo
+
+	&__logo {
+		font-size: 1.125em;
+	}
+
+	// .header__nav
+
+	&__nav {
+	}
+
+	// .header__buttons
+
+	&__buttons {
+		display: flex;
+	}
+
+	// .header__button
+
+	&__button {
+		&:not(:last-child) {
+			margin-right: 0.625em;
+		}
+	}
+
+	// Log in button
+
+	// Get started
+	&__get-started {
+		width: 160px;
+	}
+}
+.nav {
+	// .nav__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	// .nav__item
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 2em;
+		}
+	}
+
+	// .nav__link
+
+	&__link {
+		text-decoration: none;
+		color: $black;
+		font-size: 0.875em;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}

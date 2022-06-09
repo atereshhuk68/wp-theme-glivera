@@ -1,0 +1,53 @@
+// Posts
+@import "../modules/posts";
+
+// Aside blocks
+@import "../modules/aside";
+
+.main {
+	margin-top: 2.5em;
+	&__container {
+
+	}
+
+	.content {
+		&--grid {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+}
+
+.posts {
+	display: grid;
+	row-gap: 2em;
+
+	&__article {
+		padding-bottom: 3.5em;
+		border-bottom: 1px solid $border-darkgray;
+	}
+}
+
+
+.recent {
+	padding-right: 3.5em;
+
+	&__title {
+		display: inline-flex;
+		font-weight: 300;
+		font-size: 2em;
+		color: $text-dark;
+	}
+
+	&__list {
+		margin-top: 2.5em;
+	}
+
+	&__more {
+		max-width: 260px;
+		margin: 2.5em auto 0 auto;
+	}
+	&__button {
+		width: 100%;
+	}
+}
