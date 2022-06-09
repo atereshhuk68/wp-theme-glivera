@@ -44,13 +44,21 @@
 	// .article__title
 
 	&__title {
-		color: $text-dark;
-		font-weight: 300;
 		font-size: 1.5em;
 		margin-bottom: 0.25em;
 
 		.article--full & {
 			flex-grow: 1;
+		}
+
+		a {
+			font-weight: 300;
+			color: $text-dark;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -131,5 +139,19 @@
 	// .article__comments
 
 	&__comments {
+		display: inline-grid;
+		grid-auto-flow: column;
+		grid-template-columns: max-content;
+		align-items: center;
+		column-gap: 0.25em;
+		font-size: 0.875em;
+		color: $gray;
+		text-decoration: none;
+	}
+
+	&__icon {
+		width: 16px;
+		height: 16px;
+		margin: 0;
 	}
 }

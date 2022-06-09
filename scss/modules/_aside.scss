@@ -26,18 +26,33 @@
 			font-size: 1.125em;
 			color: $text-dark;
 		}
+
+		&__icon {
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 50%;
+			left: 1em;
+			transform: translateY(-50%);
+			margin: 0;
+		}
 	}
 
 	// Aside title
 	&__title {
 		display: grid;
 		grid-auto-flow: column;
+		grid-template-columns: max-content;
 		column-gap: 1em;
 		align-items: center;
 		margin-bottom: 1.25em;
 		color: $text-dark;
 		font-size: 1.5em;
 		font-weight: 300;
+	}
+
+	&__icon {
+		margin: 0;
 	}
 
 		// .aside__list

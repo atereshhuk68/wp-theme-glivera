@@ -50,8 +50,9 @@
 		font-size: 0.875em;
 		font-weight: 500;
 		display: inline-grid;
+		align-items: center;
 		grid-auto-flow: column;
-		column-gap: 1.15em;
+		column-gap: 1em;
 		text-transform: uppercase;
 		text-decoration: none;
 
@@ -60,8 +61,14 @@
 		}
 
 		&:not(:last-child) {
-			margin-right: 2em;
+			margin-right: 2.5em;
 		}
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		margin: 0;
 	}
 }
 

@@ -1,6 +1,19 @@
 .top-banner {
 	height: 40px;
 	background-color: $bg-black;
+	position: relative;
+
+	&--hidden {
+		display: none;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 2em;
+		height: 100%;
+		min-width: max-content;
+	}
 
 	// top-banner__container
 	&__container {
@@ -24,6 +37,10 @@
 
 	&__warning {
 		color: $warning;
+		display: inline-grid;
+		grid-auto-flow: column;
+		column-gap: 0.25em;
+		align-items: center;
 	}
 
 	// .top-banner__icon
@@ -42,13 +59,8 @@
 		color: white;
 	}
 }
-.icon {
-}
+.icon-close,
 .icon-warning {
-}
-.top-bannet {
-	// .top-bannet__ip
-
-	&__ip {
-	}
+	height: 24px;
+	width: 24px;
 }
