@@ -8,6 +8,10 @@
 	&__container {
 		padding-top: 6.25em;
 		padding-bottom: 3.75em;
+
+		@media (max-width: 880px) {
+			padding-top: 3.25em;
+		}
 	}
 
 	// .plans__title
@@ -18,6 +22,10 @@
 		font-size: 3em;
 		margin-bottom: 1em;
 		text-align: center;
+
+		@media (max-width: 720px) {
+			font-size: 2em;
+		}
 	}
 
 	// .plans__cards
@@ -28,9 +36,15 @@
 	// .plans__payment
 
 	&__payment {
-		display: flex;
+		display: grid;
 		align-items: center;
 		justify-content: center;
+		grid-template-columns: max-content 1fr;
+		gap: 2em;
+
+		@media (max-width: 960px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	// .plans__info
@@ -41,6 +55,10 @@
 		justify-content: center;
 
 		margin-top: 0.625em;
+
+		@media (max-width: 530px) {
+			flex-direction: column;
+		}
 	}
 
 	// .plans__link
@@ -62,6 +80,10 @@
 
 		&:not(:last-child) {
 			margin-right: 2.5em;
+			@media (max-width: 530px) {
+				margin-right: 0em;
+				margin-bottom: 2em;
+			}
 		}
 	}
 
@@ -78,6 +100,10 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1.25em;
 		align-items: center;
+
+		@media (max-width: 860px) {
+			grid-template-columns: 1fr;
+		}
 	}
 }
 
@@ -88,6 +114,11 @@
 	padding-bottom: 2.5em;
 	padding-left: 5.625em;
 	padding-right: 5.625em;
+
+	@media (max-width: 1200px) {
+		padding-left: 2.625em;
+		padding-right: 2.625em;
+	}
 
 	display: flex;
 	flex-direction: column;
@@ -108,6 +139,11 @@
 		padding-bottom: 3.75em;
 		padding-left: 5.625em;
 		padding-right: 5.625em;
+
+		@media (max-width: 1200px) {
+			padding-left: 3.625em;
+			padding-right: 3.625em;
+		}
 	}
 
 	// .card__period
@@ -208,19 +244,29 @@
 	margin-top: 3em;
 	margin-left: auto;
 	margin-right: auto;
+
+	@media (max-width: 960px) {
+		margin-bottom: 3em;
+	}
 	// .payment__title
 	&__title {
 		color: $white;
 		font-weight: 300;
 		font-size: 1.125em;
+
+		@media (max-width: 960px) {
+			text-align: center;
+		}
 	}
 
 	// .payment__method
 
 	&__method {
-		height: 100px;
-		display: flex;
+		display: grid;
 		align-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+		gap: 2em;
+		justify-items: center;
 	}
 
 	// .payment__picture
@@ -229,12 +275,10 @@
 		object-fit: contain;
 		object-position: center;
 
-		&:first-child {
-			margin-left: 2em;
-		}
-
-		&:not(:last-child) {
-			margin-right: 2em;
+		&:last-child {
+			@media (max-width: 420px) {
+				grid-column: span 3;
+			}
 		}
 	}
 }

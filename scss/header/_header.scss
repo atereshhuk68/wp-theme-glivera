@@ -19,15 +19,39 @@
 		align-items: center;
 	}
 
+	&__burger {
+		display: inline-flex;
+		min-width: max-content;
+		margin-right: 0.5em;
+
+		@media (min-width: 930px) {
+			display: none;
+		}
+	}
+
+	&__icon {
+		height: 24px;
+		width: 24px;
+	}
+
 	// .header__logo
 
 	&__logo {
 		font-size: 1.125em;
+		flex-grow: 1;
+
+		@media (min-width: 930px) {
+			flex-grow: 0;
+		}
 	}
 
 	// .header__nav
 
 	&__nav {
+		display: none;
+		@media (min-width: 930px) {
+			display: block;
+		}
 	}
 
 	// .header__buttons
@@ -45,10 +69,19 @@
 	}
 
 	// Log in button
+	&__log-in {
+		display: none;
+		@media (min-width: 475px) {
+			display: inline-flex;
+		}
+	}
 
 	// Get started
 	&__get-started {
-		width: 160px;
+		width: 126px;
+		@media (min-width: 575px) {
+			width: 160px;
+		}
 	}
 }
 .nav {

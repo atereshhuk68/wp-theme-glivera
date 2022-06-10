@@ -5,10 +5,28 @@
 	// Grid mod
 	&--full {
 		grid-template-columns: 1fr 1fr;
+
+		@media (max-width: 850px) {
+			grid-template-columns: 0.65fr 1fr;
+		}
+
+		@media (max-width: 720px) {
+			grid-template-columns: 1fr;
+		}
 	}
 	&--grid {
 		grid-template-columns: 1.3fr 2fr;
 		column-gap: 2.5em;
+
+		@media (max-width: 720px) {
+			grid-template-columns: 1fr 2fr;
+			column-gap: 1.25em;
+		}
+
+		@media (max-width: 540px) {
+			grid-template-columns: 1fr;
+			row-gap: 1em;
+		}
 	}
 
 	// .article__inner
@@ -19,6 +37,10 @@
 
 		.article--full & {
 			padding: 3.75em 3.75em 2.5em 3.75em;
+
+			@media (max-width: 720px) {
+				padding: 1.875em;
+			}
 		}
 	}
 
@@ -29,8 +51,20 @@
 		width: 100%;
 		height: 180px;
 
+		@media (max-width: 540px) {
+			height: 200px;
+		}
+
 		.article--full & {
 			height: 100%;
+
+			@media (max-width: 720px) {
+				height: 300px;
+			}
+
+			@media (max-width: 420px) {
+				height: 225px;
+			}
 		}
 
 		img {
@@ -46,6 +80,14 @@
 	&__title {
 		font-size: 1.5em;
 		margin-bottom: 0.25em;
+
+		@media (min-width: 721px) and (max-width: 930px) {
+			font-size: 1.25em;
+		}
+
+		@media (max-width: 420px) {
+			margin-bottom: 0.5em;
+		}
 
 		.article--full & {
 			flex-grow: 1;
@@ -110,6 +152,7 @@
 		display: flex;
 		align-items: center;
 		margin: 0;
+		flex-wrap: wrap;
 
 		li {
 			&:not(:last-child) {

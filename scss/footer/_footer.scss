@@ -1,17 +1,38 @@
 .footer {
 	padding-bottom: 80px;
 
+	@media (max-width: 880px) {
+		padding-bottom: 1em;
+	}
+
 	&--grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		column-gap: 4.3125em;
+		gap: 4.3125em;
+
+		@media (max-width: 1140px) {
+			gap: 2em;
+		}
+
+		@media (max-width: 880px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&--menu-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 140px 1fr;
-		column-gap: 2.875em;
+		gap: 2.875em;
+
+		@media (max-width: 1140px) {
+			gap: 1.5em;
+			grid-template-rows: 1fr;
+		}
+
+		@media (max-width: 600px) {
+			gap: 2em;
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	// .footer__container
@@ -32,19 +53,40 @@
 	&__navs {
 	}
 
+	&__column-2 {
+		.footer__menu:last-child {
+			margin-top: 3.5em;
+		}
+	}
+
+	&__column-3 {
+
+		@media (max-width: 600px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2em;
+			grid-column: span 2;
+		}
+	}
+
 	// .footer__menu
 
 	&__menu {
 
-		&:nth-child(3) {
-			grid-column: 2;
-			grid-row: 2;
-		}
+		// &:nth-child(3) {
+		// 	grid-column: 2;
+		// 	grid-row: 2;
+		// }
 
-		&:nth-child(4) {
-			grid-column: 3;
-			grid-row: 1;
-		}
+		// &:nth-child(4) {
+		// 	grid-column: 3;
+		// 	grid-row: 1;
+
+		// 	@media (max-width: 550px) {
+		// 		grid-column: 1;
+		// 		grid-row: 2;
+		// 	}
+		// }
 	}
 
 	// .footer__title
@@ -93,6 +135,10 @@
 	&__about {
 		color: $gray;
 		margin-bottom: 3em;
+
+		@media (max-width: 880px) {
+			margin-bottom: 0;
+		}
 		p {
 			margin: 0;
 			font-size: 0.875em;
@@ -106,12 +152,21 @@
 	// .footer__social
 
 	&__social {
+		@media (min-width: 601px) and (max-width: 880px) {
+			margin-top: 3.5em;
+		}
 	}
 
 	// .footer__media
 
 	&__media {
+		display: grid;
+		gap: 1.5em;
+		grid-template-columns: repeat(auto-fit, 30px);
 
+		@media (max-width: 880px) {
+			grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
+		}
 	}
 
 	// .footer__link
@@ -126,10 +181,7 @@
 	// .media__link
 
 	&__link {
-		display: inline-flex;
-		&:not(:last-child) {
-			margin-right: 1.5em;
-		}
+
 	}
 
 	// .media__pic

@@ -1,11 +1,24 @@
 .aside {
 	padding-left: 3.75em;
 	border-left: 1px solid $border-darkgray;
+	display: grid;
+	gap: 2.625em;
 
-	&__block {
-		&:not(:last-child) {
-			margin-bottom: 2.625em;
-		}
+	@media (max-width: 1110px) {
+		padding-left: 2em;
+	}
+
+	@media (max-width: 890px) {
+		padding-left: 0;
+		border: none;
+		margin-top: 3.75em;
+
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+	}
+
+	@media (max-width: 560px) {
+		grid-template-columns: 1fr;
 	}
 
 	.sidebar-announcements,
@@ -14,27 +27,9 @@
 		border-bottom: 1px solid $border-darkgray;
 	}
 
-	// Aside search
-	.search {
-		position: relative;
-
-		&__field {
-			padding: 1em 1em 1em 3em;
-			border-radius: 0.25em;
-			border: 1px solid $border-gray;
+	.sidebar-banner img {
+		@media (max-width: 540px) {
 			width: 100%;
-			font-size: 1.125em;
-			color: $text-dark;
-		}
-
-		&__icon {
-			width: 18px;
-			height: 18px;
-			position: absolute;
-			top: 50%;
-			left: 1em;
-			transform: translateY(-50%);
-			margin: 0;
 		}
 	}
 
@@ -100,3 +95,30 @@
 
 }
 
+// Aside search
+.search {
+	position: relative;
+
+	@media (max-width: 890px) {
+		margin-bottom: 2.5em;
+	}
+
+	&__field {
+		padding: 1em 1em 1em 3em;
+		border-radius: 0.25em;
+		border: 1px solid $border-gray;
+		width: 100%;
+		font-size: 1.125em;
+		color: $text-dark;
+	}
+
+	&__icon {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 50%;
+		left: 1em;
+		transform: translateY(-50%);
+		margin: 0;
+	}
+}
