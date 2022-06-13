@@ -1,0 +1,15 @@
+{
+  "name": "prepros-project",
+  "version": "1.0.0",
+  "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "browserslist": "^4.20.4",
+    "purgecss": "^4.1.3"
+  },
+  "browserslist": [
+    "last 6 version",
+    ">0.2%",
+    "not dead"
+  ]
+}

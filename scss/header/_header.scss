@@ -11,6 +11,10 @@
 .header {
 	padding-top: 2.65em;
 	padding-bottom: 1.25em;
+
+  @media (max-width: 720px) {
+    padding-top: 1em;
+  }
 	// .header__container
 
 	&__container {
@@ -49,6 +53,12 @@
 
 	&__nav {
 		display: none;
+    padding-left: 6.5em;
+
+    @media (max-width: 1200px) {
+      padding-left: 2em;
+    }
+
 		@media (min-width: 930px) {
 			display: block;
 		}
@@ -101,7 +111,7 @@
 		align-items: center;
 
 		&:not(:last-child) {
-			margin-right: 2em;
+			margin-right: 2.75em;
 		}
 
 		.arrow-down {

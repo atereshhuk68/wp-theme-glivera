@@ -39,6 +39,22 @@ body {
   margin: .5em;
 }
 
+// Footer to bottom
+._wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+._content {
+  flex: 1 0 auto;
+}
+
+._footer {
+  flex: 0 0 auto;
+}
+// Footer to bottom
+
 // Text styles
 // Heading
 @for $i from 1 through 3 {
